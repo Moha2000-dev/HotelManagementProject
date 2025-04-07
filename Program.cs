@@ -212,6 +212,7 @@
         
 
         }
+        // -------------------------------Method to find maximum cost room-----------------------------------
         static void maxCost()
         {
             double[] cost = new double[100];
