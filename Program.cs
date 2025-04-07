@@ -185,7 +185,10 @@
 
 
             }
-        } static void searchByGuestName() {
+
+            // -------------------------------Method to search by guest name-----------------------------------
+        }
+        static void searchByGuestName() {
             Console.WriteLine("pless enter the guset name");
             string guestneedName = Console.ReadLine();
             for (int i = 0; i < roomCount; i++) {
