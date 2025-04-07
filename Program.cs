@@ -93,6 +93,8 @@
       
         
         }
+        
+        //--------------------------view method-------------------------------------------------------
         static void viewRooms()
         {
             for (int i = 0; i < roomCount; i++)
@@ -113,6 +115,7 @@
             }
         }
 
+        // -------------------------------Method to reserve a room-----------------------------------
         static void reserveRoom()
         {
             try
