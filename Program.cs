@@ -23,6 +23,7 @@
                 Console.WriteLine("7. Cancel Reservation by Room Number");
                 Console.WriteLine("8. Exit");
                 Console.Write("Enter your choice: ");
+                Console.WriteLine();
                 int choice = int.Parse(Console.ReadLine());
                 switch (choice)
                 {
