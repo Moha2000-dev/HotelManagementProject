@@ -56,7 +56,7 @@
                 }
             }
         }
-
+        // --------------------------------------------------Method to add a room------------------------------------------------
         static void addRoom()
         {
             try
@@ -100,7 +100,7 @@
                 if (isReserved[i] == false)
                 {
 
-                    Console.WriteLine("Is Reserved: " + isReserved[i]);
+                    Console.WriteLine("the  avilbel room number is   " + roomNumber[i]);
                     Console.WriteLine();
                 }
                 else { 
@@ -121,8 +121,6 @@
                 int roomNum = int.Parse(Console.ReadLine());
                 Console.WriteLine("Enter Guest Name: ");
                 string guestN = Console.ReadLine();
-                Console.WriteLine("Enter Check In Date (yyyy-mm-dd): ");
-                DateTime checkIn = DateTime.Parse(Console.ReadLine());
                 Console.WriteLine("Enter Number of Nights: ");
                 int nights = int.Parse(Console.ReadLine());
                 for (int i = 0; i < roomCount; i++)
@@ -135,7 +133,7 @@
                             {
                                 isReserved[i] = true;
                                 guestName[i] = guestN;
-                                checkInDate[i] = checkIn;
+                                checkInDate[i] = DateTime.Now;
                                 nigths[i] = nights;
                                 Console.WriteLine("Room reserved successfully");
                             }
