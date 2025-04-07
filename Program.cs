@@ -159,6 +159,9 @@
                 Console.WriteLine("Error: " + e.Message);
             }
         }
+
+
+        // -------------------------------Method to view reserved rooms-----------------------------------
         static void viweReserevedRooms()
         {
             for (int i = 0; i < roomCount; i++)
