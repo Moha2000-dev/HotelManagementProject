@@ -237,6 +237,8 @@
                     Console.WriteLine("The cost is  : " + (nigths[i] * roomRate[i]));
                 }
             }
+
+//-------------------add the cancel method ----------------------------------------------------------
         }static void cancelByRoomNumber() {
             Console.WriteLine("Enter Room Number: ");
             int roomNum = int.Parse(Console.ReadLine());
