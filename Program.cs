@@ -129,7 +129,7 @@
                 Console.WriteLine("Enter Room Number: ");
                 int roomNum = int.Parse(Console.ReadLine());
                 Console.WriteLine("Enter Guest Name: ");
-                string guestN = Console.ReadLine();
+                string guestN = Console.ReadLine().ToLower();
                 Console.WriteLine("Enter Number of Nights: ");
                 int nights = int.Parse(Console.ReadLine());
                 for (int i = 0; i < roomCount; i++)
@@ -196,7 +196,7 @@
         }
         static void searchByGuestName() {
             Console.WriteLine("pless enter the guset name");
-            string guestneedName = Console.ReadLine();
+            string guestneedName = Console.ReadLine().ToLower();
             bool found = false;
             for (int i = 0; i < roomCount; i++) {
                 if (guestName[i] == guestneedName)
