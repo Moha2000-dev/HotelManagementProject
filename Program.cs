@@ -112,7 +112,8 @@
                 }
                 else { 
                  
-                    Console.WriteLine("Guest Name: " + guestName[i]);
+                    Console.WriteLine("Guest Name is : " + guestName[i]);
+                    Console.WriteLine("Room Number is : " + roomNumber[i]);
                     Console.WriteLine("The totoal cost is " + (nigths[i] * roomRate[i]) );
                     Console.WriteLine();
 
