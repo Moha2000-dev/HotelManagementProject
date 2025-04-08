@@ -192,6 +192,7 @@
         static void searchByGuestName() {
             Console.WriteLine("pless enter the guset name");
             string guestneedName = Console.ReadLine();
+            bool found = false;
             for (int i = 0; i < roomCount; i++) {
                 if (guestName[i] == guestneedName)
                 {
@@ -200,17 +201,21 @@
                     Console.WriteLine("Room number of nigths " + nigths[i]);
                     Console.WriteLine("Rate is  : " + roomRate[i]);
                     Console.WriteLine("The cost is  : " + (nigths[i] * roomRate[i]));
+                    found = true;
+                    break;
 
                 }
-                else {
-                    Console.WriteLine("not founded guset");
+                
+
                 
                 
-                }
           
             }
+            if (!found)
+            {
+                Console.WriteLine("Guest not found");
+            }
 
-        
 
         }
         // -------------------------------Method to find maximum cost room-----------------------------------
