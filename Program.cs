@@ -81,8 +81,9 @@
                         if (roomNumber[i] == roomNum)
                         {
                             Console.WriteLine("Room already exists");
-                            break;
+                            return;
                         }
+                       
                     }
                     roomNumber[roomCount] = roomNum;
                     roomRate[roomCount] = roomR;
@@ -182,10 +183,7 @@
 
 
                 }
-                else if (isReserved[i] == false)
-                {
-                    Console.WriteLine("Room is not reserved");
-                }
+                
 
 
 
