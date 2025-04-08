@@ -2,18 +2,20 @@
 {
     internal class Program
     {
+        // Arrays to store room and guest data
         static int[] roomNumber = new int[100];
         static double[] roomRate = new double[100];
         static bool[] isReserved = new bool[100];
         static string[] guestName = new string[100];
         static int[] nigths = new int[100];
         static DateTime[] checkInDate = new DateTime[100];
-        static int roomCount = 0;
+        static int roomCount = 0; // Track the number of rooms added
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to the Hotel Management System");
-            while (true)
+            Console.WriteLine("Welcome to the Hotel Management System");// Welcome message
+            while (true)// Loop to keep the menu running
             {
+                // Display menu options
                 Console.WriteLine("1. Add Room");
                 Console.WriteLine("2. View Rooms");
                 Console.WriteLine("3. Reserve Room");
@@ -25,7 +27,7 @@
                 Console.Write("Enter your choice: ");
                 Console.WriteLine();
 
-                try
+                try // Try-catch to handle unexpected errors
                 {
                     // TryParse to avoid crash on invalid input
                     bool success = int.TryParse(Console.ReadLine(), out int choice);
@@ -77,12 +79,13 @@
         {
             try
             {
-                Console.WriteLine("Enter Room Number: ");
-                int roomNum = int.Parse(Console.ReadLine());
-                Console.WriteLine("Enter Room Rate: ");
-                double roomR = double.Parse(Console.ReadLine());
+                Console.WriteLine("Enter Room Number: ");// Ask for room number
+                int roomNum = int.Parse(Console.ReadLine()); // Parse room number
+                Console.WriteLine("Enter Room Rate: "); // Ask for room rate
+                double roomR = double.Parse(Console.ReadLine()); // Parse room rate
 
-                if (roomR > 100)
+
+                if (roomR > 100) // Check if room rate exceeds limit
                 {
                     Console.WriteLine("Room Rate must be less than 100 ");
                     return;
@@ -91,19 +94,20 @@
                 }
                 else
                 {
-                    for (int i = 0; i < roomCount; i++)
+                    for (int i = 0; i < roomCount; i++) // Check for duplicate room
                     {
                         if (roomNumber[i] == roomNum)
                         {
-                            Console.WriteLine("Room already exists");
+                            Console.WriteLine("Room already exists"); // Room exists
                             return;
                         }
 
                     }
+                    // Add room information
                     roomNumber[roomCount] = roomNum;
                     roomRate[roomCount] = roomR;
                     isReserved[roomCount] = false;
-                    roomCount++;
+                    roomCount++;  // Increase room count
                     Console.WriteLine("Room added successfully");
                 }
             }
@@ -123,7 +127,7 @@
                 if (isReserved[i] == false)
                 {
 
-                    Console.WriteLine("the  avilbel room number is   " + roomNumber[i]);
+                    Console.WriteLine("the  avilbel room number is   " + roomNumber[i]); // Handle parsing errors
                     Console.WriteLine();
                 }
                 else
