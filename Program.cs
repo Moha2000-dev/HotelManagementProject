@@ -66,9 +66,13 @@
                 int roomNum = int.Parse(Console.ReadLine());
                 Console.WriteLine("Enter Room Rate: ");
                 double roomR = double.Parse(Console.ReadLine());
+                
                 if (roomR > 100)
                 {
                     Console.WriteLine("Room Rate must be less than 100 ");
+                    return;
+
+
                 }
                 else
                 {
@@ -77,7 +81,7 @@
                         if (roomNumber[i] == roomNum)
                         {
                             Console.WriteLine("Room already exists");
-                            return;
+                            break;
                         }
                     }
                     roomNumber[roomCount] = roomNum;
